@@ -1,18 +1,16 @@
-package lk.riyapola.riyapola.entity;
+package lk.riyapola.riyapola.dto;
 
-import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-@Entity
+
 @Data
 @NoArgsConstructor
 
-public class Customer {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class CustomerDto {
+
     private  int customer_id;
     private String firstName;
     private  String lastname;
@@ -22,7 +20,4 @@ public class Customer {
     private  String email;
     private  String userName;
     private  String password;
-
-    public Customer(String firstName, String lastname, String nic, String address) {
-    }
 }
